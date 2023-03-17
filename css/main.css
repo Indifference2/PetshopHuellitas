@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logoimg {
+	width: 7em;
+	object-fit: cover;
+}
+
+a {
+	margin-left: 50px;
+}
+header {
+	background-image: url(../img/perroygato.jpg);
+	background-position: end;
+}
+.navbar-toggler {
+	border: none;
+}
+
+nav {
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	min-height: 15vh;
+	background-color: white;
+	border-radius: 0px 0px 50px 50px;
+}
+.active {
+	padding: 10px;
+	background-color: #ca8e66;
+	color: white !important;
+	border-radius: 10px;
+}
+.material-symbols-outlined {
+	font-size: 40px;
+	color: #ca8e66;
+}
+.slogan {
+	background-image: url(../img/perroygato.jpg);
+	height: 60vh;
+	background-position: center;
+	background-attachment: scroll;
+}
+h1 {
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.h2index {
+	background-color: rgba(202, 142, 102, 0.737);
+	font-weight: 700;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.perrosygatos {
+	overflow: hidden;
+	cursor: pointer;
+}
+.perro {
+	background-image: url(../img/perrosolo.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 50em;
+	width: 50%;
+	transition: 0.4s;
+}
+.perro:hover {
+	transform: scale(1.1);
+}
+.gato {
+	background-image: url(../img/gatosolo.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 50em;
+	width: 50%;
+	transition: 0.4s;
+}
+.gato:hover {
+	transform: scale(1.1);
+}
+.textCard {
+	font-weight: 600;
+	font-size: 8em;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.footerIndex {
+	width: 100%;
+	min-height: 8vh;
+	background-color: rgba(202, 142, 102, 0.737);
+}
+.redes svg {
+	height: 4em;
+	width: 3em;
+	color: white;
+	padding-left: 15px;
+}
+.ubicacion svg {
+	height: 4em;
+	width: 2em;
+	color: red;
+}
+.bi-whatsapp:hover {
+	color: greenyellow;
+}
+.bi-facebook:hover {
+	color: rgb(53, 53, 235);
+}
+.bi-instagram:hover {
+	color: rgb(230, 72, 206);
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+	li {
+		display: flex;
+		justify-content: start;
+	}
+	a {
+		margin: 0 !important;
+	}
+	.material-symbols-outlined {
+		font-size: 40px;
+		justify-content: center;
+		margin: auto !important;
+		padding-top: 25px;
+	}
+	.perrosygatos {
+		flex-direction: column;
+	}
+	.perro {
+		width: 100%;
+		background-size: cover;
+	}
+	.gato {
+		width: 100%;
+	}
+	.textCard {
+		font-size: 5em;
+	}
+	.footerIndex {
+		flex-direction: column;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+	.redes {
+		margin: 0 !important;
+	}
+	.ubicacion {
+		margin: 0 !important;
+	}
+}
