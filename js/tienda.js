@@ -1,5 +1,4 @@
-const {createApp}= Vue
-
+const {createApp} = Vue
 
 const app= createApp({
 
@@ -11,8 +10,7 @@ const app= createApp({
             checkValue:[],
             resultado:[undefined],
             filtrotexto:"",
-            disponible : []
-
+            disponible : [],
         }
     },
     created(){
@@ -22,19 +20,19 @@ const app= createApp({
                 this.datos = data
                 this.categorias = [...new Set(this.datos.map(key => key.categoria))]
                 this.disponible = this.datos.filter(key => key.disponibles < 5)
-                console.log(this.datos)
                 this.resultado = data
+                console.log(this.disponible)
                 
             })
     },
     methods:{
-        
         filtrobusqueda(){
             this.resultado = this.datos.filter(key => {
                 return key.producto.toLowerCase().includes(this.filtrotexto.toLowerCase())
                 && (this.checkValue.includes(key.categoria) || this.checkValue.length == 0)
             })
-        }
+        },
     }
 })
+
 app.mount("#andres")
