@@ -3,33 +3,37 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none !important;
+    
 }
-
 .logo {
     width: 4rem;
     margin-left: 5rem;
 }
-
-.navbar {
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
-    height: 5rem;
-    width: 100%;
-    background-color: #000000;
+.navbar-collapse{
+    flex-grow: 0 !important;
+  
+  
 }
-nav.abajo{
-    background-color: #000000 ;
+.nav-item a{
+   color: rgba(0, 0, 0, 0.463) !important;
+   margin-right: 3rem;
+  
 }
-nav.abajo .nav-item a{
-   color: #000000;
-}
-.navbar a{
-    color: #fff !important;
-    text-decoration: none;
+.nav-item a:hover{
+    color: rgb(0, 0, 0) !important;
 }
 main {
-    min-height: 40rem;
+    min-height: 34rem;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+}
+.main a{
+    text-decoration: none;
+    color: white !important;
 }
 
 footer {
@@ -41,7 +45,6 @@ footer {
     justify-content: space-between;
 
 }
-
 body{
     font-family: none !important;
 }
@@ -49,20 +52,6 @@ body{
     width: 2.5rem;
     margin-left: 1rem;
 }
-.nav-link{
-    border-radius: 20px ;
-}
-
-.collapse {
-    flex-grow: 0 !important;
-    margin-right: 3rem !important;
-}
-
-.nav-item {
-    padding-right: 2rem !important;
-    padding-left: 3rem !important;
-}
-
 .material-symbols-outlined {
     color: rgb(231, 157, 45);
     font-size: 2rem !important;
@@ -79,10 +68,7 @@ body{
     width: 30rem;
 }
 
-.texto {
-    margin-left: 9rem;
-    margin-top: 11rem;
-}
+
 .card5 {
     box-sizing: border-box;
     background: rgba(217, 217, 217, 0.58);
@@ -154,23 +140,17 @@ body{
     font-size: 1.5em;
     font-weight: bold;
 }
-.main {
-    display: flex;
-}
+
 
 .carta-flex {
    width: 100%;
    height: 100%;
-   margin-top: 5rem;
 }
 .carta{
     display: flex;
     justify-content: space-evenly;
 }
-.main a{
-    text-decoration: none;
-    color: white !important;
-}
+
 /* check----------------- */
 .check{
     display: flex;
@@ -201,9 +181,7 @@ label{
     margin-top: 1rem;
 }
 
-.nav-link:hover{
-    background-color: rgb(231, 157, 45) !important;
-}
+
 .todo{
     display: flex;
 }
@@ -365,10 +343,6 @@ label{
     .main {
         flex-direction: column;
     }
-    .texto {
-        margin-left: 19rem;
-        margin-top: 11rem;
-    }
     footer {
         margin-top: 5rem;
     }
@@ -381,19 +355,8 @@ label{
     .main {
         flex-direction: column;
     }
-    .texto {
-        margin-left: 10rem;
-        margin-top: 11rem;
-    }
-    .card-2{
-        min-height: 36rem !important;
-    }
     .material-symbols-outlined {
         padding-top: 0.5rem;
-    }
-    a {
-        margin-top: 0.7rem;
-        width: 4rem;
     }
     .nav-item {
         padding-left: 0rem !important;
@@ -408,25 +371,17 @@ label{
 
      width: 0rem;
     }
-       
-    .fancy .text {
-        margin-left:-2.2em;
-    
-    }
-    
-    .card-info2 {
-        padding-top: 0% !important;
-        min-height: 7rem ; 
-        
-    }
     .card-detalles{
         width: 40rem !important;
         margin-left: 7%;
-        margin-top: 30%;
+        margin-top: 22%;
       }
       main{
         min-height: 0rem !important;
       }
+      .nav-item a{
+        margin-left: 0rem;
+     }
 }
 
 @media(min-width:425px) and (max-width:767px) {
@@ -442,8 +397,7 @@ label{
         width: 19rem;
     }
     .texto {
-        margin-left: 4rem;
-        margin-top: 14rem;
+        margin-top: 0rem;
     }
     .material-symbols-outlined {
         padding-top: 0.5rem;
@@ -459,14 +413,7 @@ label{
         margin-left: 15%;
     }
     .card5{
-        margin-top: 4rem;
-    }
-    a {
-        margin-top: 0.7rem;
-        width: 4rem;
-    }
-    .nav-item {
-        padding-left: 0rem !important;
+        margin-top: 1rem;
     }
     .carrosel{
         display: none;
@@ -478,9 +425,6 @@ label{
     .fancy::before {
      width: 0rem;
     } 
-    .fancy .text {
-        margin-left:-2.2em;
-    }
     .padre-check{
         display: flex;
         justify-content: space-evenly;
@@ -488,8 +432,10 @@ label{
     .card-detalles{
         width: 20rem !important;
         margin-left: 7%;
-        margin-top: 60%;
       }
+      .nav-item a{
+        margin-left: 0rem;
+     }
 }
 
 @media(min-width:375px) and (max-width:424px) {
@@ -505,8 +451,7 @@ label{
         width: 19rem;
     }
     .texto {
-        margin-left: 2.4rem;
-        margin-top: 14rem;
+        margin-top: 0rem;
     }
     .material-symbols-outlined {
         padding-top: 0.5rem;
@@ -525,16 +470,8 @@ label{
         margin-left: 12%;
     }
     .card5{
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
-    a {
-        margin-top: 0.7rem;
-        width: 4rem;
-    }
-    .nav-item {
-        padding-left: 0rem !important;
-    }
-
     .carrosel{
         display: none;
     }
@@ -544,9 +481,6 @@ label{
     .fancy::before {
      width: 0rem;
     }  
-    .fancy .text {
-        margin-left:-2.2em;
-    }
     .padre-check{
         display: flex;
         justify-content: space-evenly;
@@ -554,15 +488,14 @@ label{
     .card-detalles{
         width: 20rem !important;
         margin-left: 7%;
-        margin-top: 60%;
       }
+      .nav-item a{
+        margin-left: 0rem;
+     }
+
 }
 
 @media(min-width:320px) and (max-width:374px) {
-    
-    .navbar{
-        width: 100%
-    }
     .padre-check{
         display: flex;
         justify-content: center;
@@ -579,7 +512,7 @@ label{
     }
     .texto {
         margin-left: 0.5rem;
-        margin-top: 14rem;
+        margin-top: 0rem;
     }
     .material-symbols-outlined {
         padding-top: 0.5rem;
@@ -595,28 +528,21 @@ label{
         margin-left: 5%;
     }
     .card5{
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
     
-    a {
-        margin-top: 0.7rem;
-        width: 4rem;
-    }
-    .nav-item {
-        padding-left: 0rem !important;
-    }
     .carrosel{
         display: none;
     }
     .todo{
         flex-direction: column;
     }
-    .fancy .text {
-        margin-left:-2.2em;
-    }
     .card-detalles{
         width: 20rem !important;
         margin-left: 0%;
-        margin-top: 60%;
       }   
+      .nav-item a{
+        margin-left: 0rem;
+     }
+     
 }
