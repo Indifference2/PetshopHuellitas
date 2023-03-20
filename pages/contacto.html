@@ -70,19 +70,19 @@
 				<form action="" method="get">
 					<div class="divForm">
 						<img src="../img/person-fill.svg" alt="icono nombre" class="imgform" />
-						<input type="text" id="nombre" placeholder="Ingrese sus nombres" required />
+						<input type="text" id="nombre" value="" placeholder="Ingrese sus nombres" required />
 					</div>
 					<div class="divForm">
 						<img src="../img/person-fill.svg" alt="icono apellid" class="imgform" />
-						<input type="text" id="apellido" placeholder="Ingrese sus apellido " required />
+						<input type="text" id="apellido" value="" placeholder="Ingrese sus apellido " required />
 					</div>
 					<div class="divForm">
 						<img src="../img/telephone-fill.svg" alt="telefono" class="imgform" />
-						<input type="text" id="celular" placeholder="22548218" required />
+						<input type="text" id="celular" value="" placeholder="22548218" required />
 					</div>
 					<div>
 						<label for="mascotas" class="mascotas text-light fs-3">¿ Que mascota tenes ?</label>
-						<select name="" id="mascota" class="mb-4" required>
+						<select name="" id="mascota" value="" class="mb-4" required>
 							<option value="">Mascotas</option>
 							<option value="">Perro</option>
 							<option value="">Gato</option>
@@ -93,8 +93,28 @@
 						<label for="dudas" class="dudas text-light">Cuentame tus dudas</label><br />
 						<textarea name="" id="dudas"></textarea>
 					</div>
-
-					<input type="submit" class="btn" />
+					<button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>
+					<div
+						class="modal fade"
+						id="staticBackdrop"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="staticBackdropLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog d-flex justify-content-center align-items-center">
+							<div class="modal-content">
+								<div class="modal-header justify-content-center">
+									<h3 class="modal-title fs-2 text-center" id="staticBackdropLabel"></h3>
+								</div>
+								<div class="modal-body text-center">TU INFORMACION SE ENVIO EXITOSAMENTE</div>
+								<div class="modal-footer justify-content-center">
+									<button type="button" class="btn" data-bs-dismiss="modal">Salir</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</form>
 			</div>
 		</main>

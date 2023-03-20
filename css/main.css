@@ -134,7 +134,15 @@ h1 {
 	color: red;
 }
 /*-----------------------------COMIENZA CONTACTO-------------------------------*/
-
+.modal-header {
+	border: none !important;
+}
+.modal-footer {
+	border: none !important;
+}
+.modal-dialog {
+	height: 100vh;
+}
 .contacto {
 	background-image: url(../img/perrodurmiendo.jpg);
 	background-position: center;
@@ -144,8 +152,9 @@ h1 {
 	font-size: 7em !important;
 }
 .textcontacto {
-	background-color: rgba(202, 142, 102, 0.88);
-	font-size: 700;
+	background-color: rgba(202, 142, 102, 0.737);
+	font-weight: 700;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
 }
 .formulario {
 	min-height: 40vh;
@@ -214,6 +223,7 @@ textarea {
 	transform: translateY(-55%);
 }
 .btn {
+	width: 100%;
 	color: white;
 	padding: 20px;
 	background: linear-gradient(90deg, rgba(202, 142, 102, 0.88), rgba(197, 171, 154, 0.88));
