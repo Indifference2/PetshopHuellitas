@@ -47,10 +47,10 @@
 								<a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" href="#">Contacto</a>
+								<a class="nav-link" href="./contacto.html">Contacto</a>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link me-0 tienda" href="./encuentranos.html"> Encuentranos </a>
+								<a class="nav-link me-0 active" href="#"> Encuentranos </a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link me-5 tienda" href="#"> Tienda </a>
@@ -62,40 +62,25 @@
 			</nav>
 		</header>
 		<main>
-			<div class="contacto text-light d-flex justify-content-center align-items-center">
-				<h1>Contactanos</h1>
+			<div class="encuentranos text-light d-flex justify-content-center align-items-center">
+				<h1>Ubicación</h1>
 			</div>
-			<h2 class="text-center p-4 m-0 textcontacto text-light">DEJANOS TUS DATOS</h2>
-			<div class="formulario d-flex justify-content-center align-items-baseline flex-column">
-				<form action="" method="get">
-					<div class="divForm">
-						<img src="../img/person-fill.svg" alt="icono nombre" class="imgform" />
-						<input type="text" id="nombre" placeholder="Ingrese sus nombres" required />
-					</div>
-					<div class="divForm">
-						<img src="../img/person-fill.svg" alt="icono apellid" class="imgform" />
-						<input type="text" id="apellido" placeholder="Ingrese sus apellido " required />
-					</div>
-					<div class="divForm">
-						<img src="../img/telephone-fill.svg" alt="telefono" class="imgform" />
-						<input type="text" id="celular" placeholder="22548218" required />
-					</div>
-					<div>
-						<label for="mascotas" class="mascotas text-light fs-3">¿ Que mascota tenes ?</label>
-						<select name="" id="mascota" class="mb-4" required>
-							<option value="">Mascotas</option>
-							<option value="">Perro</option>
-							<option value="">Gato</option>
-							<option value="">Ambas</option>
-						</select>
-					</div>
-					<div>
-						<label for="dudas" class="dudas text-light">Cuentame tus dudas</label><br />
-						<textarea name="" id="dudas"></textarea>
-					</div>
-
-					<input type="submit" class="btn" />
-				</form>
+			<h2 class="text-center p-4 m-0 textcontacto text-light">NOS PODES ENCONTRAR</h2>
+			<div class="d-flex justify-content-around align-items-center flex-wrap">
+				<div>
+					<h3 class="fs-1 textoU"><span>Email :</span> huellitas@gmail.com</h3>
+					<h3 class="fs-1 textoU"><span>Telefono :</span> 1156874226</h3>
+				</div>
+				<div class="d-flex justify-content-center">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148699.73996362192!2d-58.417338799234734!3d-34.557832144393316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1ses!2sar!4v1679328664074!5m2!1ses!2sar"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						class="m-5"
+					></iframe>
+				</div>
 			</div>
 		</main>
 		<button id="topBtn">⇧</button>
