@@ -54,7 +54,7 @@
             </div>
         </nav>
     </header>
-    <main >
+    <main>
             <div class="carrosel d-none d-lg-block">
                 <img src="../assets/img/img-1.jpg" class="img-carrosel" alt="...">
                 <img src="../assets/img/img-6.jpg" class="img-carrosel" alt="...">
@@ -74,16 +74,16 @@
                     <div class="check d-flex align-items-center mb-4">
                         <h2>Categorias</h2>
                         <template v-for="categoria of categorias">
-                            <div class="form-check d-flex align-items-center">
+                            <div class="form-check p-0 d-flex align-items-center">
                                 <label class="form-check-label">
                                     <div class="dropdown">
-                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button class="btn dropdown-toggle text-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {{categoria.toLocaleUpperCase()}}
                                         </button>
                                         <ul class="dropdown-menu p-2">
                                             <li>
                                                 <label>
-                                                    <input type="checkbox" name="perros" >
+                                                    <input type="checkbox" name="perros" :value="ch_value" >
                                                     Perros
                                                 </label>
                                             </li>
@@ -111,7 +111,7 @@
                                     </div>
                                     <div class="card-footer2">
                                         <span class="text-title2 text-center">$ {{dato.precio}} </span>
-                                        <button class="btn btn-warning">Agregar al carrito</button>
+                                        <button @click="añadir(dato)" class="btn btn-warning text-white">Agregar al carrito</button>
                                             <div class="card-button2 d-none">
                                                 <svg class="svg-icon" viewBox="0 0 20 20">
                                                     <path
