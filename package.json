@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.2.3",
-    "bootstrap-vue": "^2.23.1",
-    "portal-vue": "^3.0.0",
-    "vue": "^3.2.47"
-  }
-}
