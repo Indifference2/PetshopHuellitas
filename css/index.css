@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none !important;
 }
 
 .logo {
@@ -10,10 +11,23 @@
 }
 
 .navbar {
+    display: flex;
+    align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
     height: 5rem;
+    width: 100%;
+    background-color: #000000;
 }
-
+nav.abajo{
+    background-color: #000000 ;
+}
+nav.abajo .nav-item a{
+   color: #000000;
+}
+.navbar a{
+    color: #fff !important;
+    text-decoration: none;
+}
 main {
     min-height: 40rem;
 }
@@ -28,14 +42,15 @@ footer {
 
 }
 
-.petcare {
-    margin-right: 8rem;
-    margin-top: 1rem;
+body{
+    font-family: none !important;
 }
-
 .logo-footer {
     width: 2.5rem;
     margin-left: 1rem;
+}
+.nav-link{
+    border-radius: 20px ;
 }
 
 .collapse {
@@ -68,91 +83,53 @@ footer {
     margin-left: 9rem;
     margin-top: 11rem;
 }
-
-
-a {
-    color: black !important;
-    border: unset;
-    border-radius: 15px;
-    z-index: 1;
-    position: relative;
-    transition: all 250ms;
-    overflow: hidden;
-}
-
-a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: rgb(231, 157, 45);
-    z-index: -1;
-    transition: all 250ms
-}
-
-a:hover::before {
-    width: 100%;
-}
-
-
-.card {
+.card5 {
     box-sizing: border-box;
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
+    border-radius: 30px !important;
     text-align: center;
     cursor: pointer;
     transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     user-select: none;
     font-weight: bolder;
-    border-radius: 30px !important;
 }
 
-.card:hover {
+.card5:hover {
     border: 1px solid black;
-    transform: scale(1.05);
+    transform: scale(1);
+}
+.card5:hover {
+    border-color: rgb(231, 157, 45);
 }
 
-.card:active {
-    transform: scale(0.95) rotateZ(1.7deg);
+.card5:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
 }
+
 
 .img-fondo {
-    width: 18rem;
     height: 22rem;
     object-position: center;
     margin-top: 3rem;
-    object-fit: contain;
+    width: 100%;
 }
 
 .dog {
+    width: 100%;
     margin-bottom: 6rem;
     color: rgb(231, 157, 45);
 }
 
-.card {
+.card5 {
     width: 18rem;
     height: 26rem;
-    border-radius: 20px;
-    margin-left: 7rem;
-    margin-top: 6rem;
-    position: relative;
-    padding: 1.8rem;
-    transition: 0.5s ease-out;
-    overflow: visible;
 }
 
 .card-details {
     height: 100%;
-    gap: .5em;
     display: grid;
     place-content: center;
 }
@@ -177,26 +154,18 @@ a:hover::before {
     font-size: 1.5em;
     font-weight: bold;
 }
-
-.card:hover {
-    border-color: rgb(231, 157, 45);
-}
-
-.card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-}
-
-/* .maps{
-    width: 20rem;
-} */
-
 .main {
     display: flex;
 }
 
 .carta-flex {
+   width: 100%;
+   height: 100%;
+   margin-top: 5rem;
+}
+.carta{
     display: flex;
+    justify-content: space-evenly;
 }
 .main a{
     text-decoration: none;
@@ -204,21 +173,22 @@ a:hover::before {
 }
 /* check----------------- */
 .check{
+    display: flex;
+    justify-content: space-evenly;
     width: 15rem;
-    height: 22rem;
-    margin-top: 4rem;
+    height: 20rem;
+    margin-top: 5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
-    margin-left: 2rem;
-   
 }
+
+
 h2{
     font-family: 'Passion One', cursive;
     font-size: 2rem;
-    padding-bottom: 2rem;
     color: rgb(231, 157, 45);
 }
 form{
@@ -231,20 +201,20 @@ label{
     margin-top: 1rem;
 }
 
-.form-check-input{
+.nav-link:hover{
     background-color: rgb(231, 157, 45) !important;
 }
 .todo{
     display: flex;
-
 }
 .hola{
-    width: 100% ;
-    margin-left: 1rem;
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
 }
-
-
 /* store------------------------------------------------------------- */
 
 .carrosel {
@@ -275,258 +245,29 @@ label{
 .hola2{
     display: flex;
     flex-wrap: wrap;
-}
-.input-group{
-    width: 37rem !important;
-    margin-left: 25%;
-    margin-bottom: 2rem !important;
-}
-.lupa{
-    width: 20px;
+    justify-content: space-around;
 }
 .text-error{
-    padding-left: 35%;
-    padding-top: 6%;
+    width: 100%;
+    margin-top: 1rem;
 }
-.fancy {
-    
-    background-color: transparent;
-    border: 2px solid #ff0000;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-right: 2.7rem;
-    outline: none;
-    overflow: visible;
-    padding: .85em 1em;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: none;
-    transition: all 0.3s ease-in-out;
-    user-select: none;
-    font-size: 13px;
-   }
-   
-   .fancy::before {
-    content: " ";
-    width: .5625rem;
-    height: 2px;
-    background: rgb(236, 3, 3);
-    top: 50%;
-    left: .3em;
-    position: absolute;
-    transform: translateY(-50%);
-    transform-origin: center;
-    transition: background 0.3s linear, width 0.3s linear;
-   }
-   
-   .fancy .text {
-    font-size: .825em;
-    line-height: 1.33333em;
-    padding-left: 1em;
-    display: block;
-    text-align: left;
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: rgb(255, 0, 0);
-   }
-   
-   .fancy .top-key {
-    height: 2px;
-    width: .5625rem;
-    top: -2px;
-    left: 0.625rem;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
-   }
-   
-   .fancy .bottom-key-1 {
-    height: 1px;
-    width: .5625rem;
-    right: 1.875rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
-   
-   .fancy .bottom-key-2 {
-    height: 1px;
-    width: 0.125rem;
-    right: 0.125rem;
-    bottom: -2px;
-    position: absolute;
-    background: #e8e8e8;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
-   
-   .fancy:hover {
-    color: white;
-    background: rgb(253, 0, 0);
-   }
-   
-   .fancy:hover::before {
-    width: 0.4375rem;
-    background: white;
-   }
-   
-   .fancy:hover .text {
-    color: white;
-    padding-left: .2em;
-   }
-   
-   .fancy:hover .top-key {
-    left: -2px;
-    width: 0px;
-   }
-   
-   .fancy:hover .bottom-key-1,
-    .fancy:hover .bottom-key-2 {
-    right: 0;
-    width: 0;
-   }
-/* targetas---------------------------------- */
-.card-2 {
-    width: 17rem;
-    margin-top: 2rem;
-    margin-left: 8rem;
-    min-height: 32rem;
-    padding: .8em;
-    background: #f5f5f5;
-    position: relative;
-    overflow: visible;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-   }
-   
-   .card-img2 {
-    background-color: rgb(231, 157, 45);
-    height: 15rem;
-    width: 100%;
-    border-radius: .5rem;
-    transition: .3s ease;
-   }
-   
-   .card-info2 {
-    padding-top: 5%;
-    min-height: 8rem;
-   }
-   
-   svg {
-    width: 20px;
-    height: 20px;
-   }
-   
-   .card-footer2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-    height: 9rem;
-   }
-   
-   /*Text*/
-   .text-title2 {
-    font-weight: 900;
-    font-size: 1.2em;
-    line-height: 1.5;
-    min-height: 4rem;
-   }
-   .text-title1{
-    font-weight: 900;
-   margin-top: 4rem;
-   margin-right: 1rem;
-   }
-   
-   .text-body2 {
-    font-size: .9em;
-    padding-bottom: 10px;
-   }
-   
-   /*Button*/
-   .card-button2 {
-    border: 1px solid #252525;
-    display: flex;
-    padding: .3em;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: .3s ease-in-out;
-    
-   }
-   .carrito{
-    margin-bottom: 2rem;
-   }
-   
-   /*Hover*/
-   .card-img2:hover {
-    transform: translateY(-25%);
-    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-   }
-   
-   .card-button2:hover {
-    border: 1px solid rgb(231, 157, 45);
-    background-color: rgb(231, 157, 45);
-   }
-
-   .mas-info{
-    text-decoration: none;
-    color: rgb(231, 157, 45) !important;
-   }
-
-   button  {
-    color: rgb(231, 157, 45);
-    padding-right: 1.5rem;
-    margin-top: 6rem !important;
-    text-decoration: none;
-    font-size: 25px;
-    border: none;
-    background: none;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  button::before {
-    margin-left: auto;
-  }
-  
-  button::after, button::before {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: rgb(251, 150, 0);
-    display: block;
-    transition: 0.5s;
-  }
-  
-  button:hover::after, button:hover::before {
-    width: 100%;
-  }
-   
-
   .wrapper {
-    display: inline-flex;
-    list-style: none;
+    display: flex;
     height: 3rem;
     margin-bottom:1.3rem;
     width: 100%;
     font-family: "Poppins", sans-serif;
     justify-content: center;
   }
-  
+  ol, ul{
+    padding-left: 0 !important;
+  }
   .wrapper .icon {
     position: relative;
     background: #fff;
     border-radius: 50%;
     margin: 10px;
+    left: 0 !important;
     width: 50px;
     height: 50px;
     font-size: 18px;
@@ -615,34 +356,21 @@ label{
   .card-title{
     font-family: 'Passion One', cursive;
   }
+  
+
+
 
 
 @media(min-width:1024px) and (max-width:1439px) {
     .main {
         flex-direction: column;
     }
-
     .texto {
         margin-left: 19rem;
         margin-top: 11rem;
     }
-
-    .card {
-        margin-left: 9rem;
-        margin-top: 3rem;
-    }
-
     footer {
         margin-top: 5rem;
-    }
-    .card-2 {
-        width: 18.9rem;
-        margin-top: 2rem;
-        margin-left: 2.5rem;
-       }
-       .input-group{
-        width: 30rem !important;
-        margin-left: 17%;
     }
     .card-detalles{
         margin-left: 10%;
@@ -653,30 +381,20 @@ label{
     .main {
         flex-direction: column;
     }
-
     .texto {
         margin-left: 10rem;
         margin-top: 11rem;
     }
-
-    .card {
-        margin-left: 4.2rem;
-        margin-top: 3rem;
+    .card-2{
+        min-height: 36rem !important;
     }
-
-    footer {
-        margin-top: 5rem;
-    }
-
     .material-symbols-outlined {
         padding-top: 0.5rem;
     }
-
     a {
         margin-top: 0.7rem;
         width: 4rem;
     }
-
     .nav-item {
         padding-left: 0rem !important;
     }
@@ -686,21 +404,6 @@ label{
     .todo{
         flex-direction: column;
     }
-    .input-group{
-        width: 32rem !important;
-        margin-left: 17%;
-        margin-bottom: 2rem !important;
-    }
-    .card-2 {
-        width: 18.9rem;
-        margin-top: 2rem;
-        margin-left: 2.5rem;
-       }
-       .hola{
-        width: 90% ;
-        margin-left: 1rem;
-        margin-top: 5rem;
-    }  
     .fancy::before {
 
      width: 0rem;
@@ -710,12 +413,11 @@ label{
         margin-left:-2.2em;
     
     }
-    .check{
-        margin-left: 17rem;
-    }
+    
     .card-info2 {
-        padding-top: 0%;
-        min-height: 9rem;
+        padding-top: 0% !important;
+        min-height: 7rem ; 
+        
     }
     .card-detalles{
         width: 40rem !important;
@@ -736,57 +438,35 @@ label{
         width: 19rem;
         font-size: 2rem;
     }
-
     .texto-dos {
         width: 19rem;
     }
-
     .texto {
         margin-left: 4rem;
         margin-top: 14rem;
     }
-
     .material-symbols-outlined {
         padding-top: 0.5rem;
     }
-
     .main {
         flex-direction: column;
     }
-
-    .card {
-        margin-left: 4.2rem;
-        margin-top: 3rem;
-    }
-
-    footer {
-        flex-direction: column;
-        margin-top: 5rem;
-        height: 8rem;
-    }
-
     .logo-footer {
         margin: 2px;
     }
-
-    .petcare {
-        margin-left: 8rem;
-    }
-
-    .carta-flex {
+    .carta{
         flex-direction: column;
+        margin-left: 15%;
     }
-
+    .card5{
+        margin-top: 4rem;
+    }
     a {
         margin-top: 0.7rem;
         width: 4rem;
     }
-
     .nav-item {
         padding-left: 0rem !important;
-    }
-    .wrapper {
-        margin-top:1.5rem;
     }
     .carrosel{
         display: none;
@@ -794,33 +474,16 @@ label{
     .todo{
         flex-direction: column;
     }
-    .input-group{
-        width: 16rem !important;
-        margin-left: 17%;
-        margin-bottom: 2rem !important;
-    }
     
-    .card-2 {
-        width: 18.9rem;
-        margin-top: 2rem;
-        margin-left: 2.5rem;
-       }
-       .hola{
-        width: 90% ;
-        margin-left: 1rem;
-        margin-top: 5rem;
-    }  
     .fancy::before {
-
      width: 0rem;
-    }
-       
+    } 
     .fancy .text {
         margin-left:-2.2em;
-    
     }
-    .check{
-        margin-left: 5.6rem;
+    .padre-check{
+        display: flex;
+        justify-content: space-evenly;
     }
     .card-detalles{
         width: 20rem !important;
@@ -851,22 +514,18 @@ label{
     .main {
         flex-direction: column;
     }
-    .card {
-        margin-left: 2.8rem;
-        margin-top: 3rem;
-    }
-    footer {
-        margin-top: 5rem;
-        height: 8rem;
-    }
     .logo-footer {
         margin: 2px;
     }
     .petcare {
         margin-left: 8rem;
     }
-    .carta-flex {
+    .carta{
         flex-direction: column;
+        margin-left: 12%;
+    }
+    .card5{
+        margin-top: 4rem;
     }
     a {
         margin-top: 0.7rem;
@@ -875,39 +534,22 @@ label{
     .nav-item {
         padding-left: 0rem !important;
     }
-    .wrapper {
-        margin-top:1.5rem;
-    }
+
     .carrosel{
         display: none;
     }
     .todo{
         flex-direction: column;
     }
-    .input-group{
-        width: 16rem !important;
-        margin-left: 13%;
-        margin-bottom: 2rem !important;
-    }
-    
-    .card-2 {
-        width: 18.9rem;
-        margin-top: 2rem;
-        margin-left: 1rem;
-       }
-       .hola{
-        width: 90% ;
-        margin-left: 1rem;
-        margin-top: 5rem;
-    }  
     .fancy::before {
      width: 0rem;
     }  
     .fancy .text {
         margin-left:-2.2em;
     }
-    .check{
-        margin-left: 4.4rem;
+    .padre-check{
+        display: flex;
+        justify-content: space-evenly;
     }
     .card-detalles{
         width: 20rem !important;
@@ -917,6 +559,14 @@ label{
 }
 
 @media(min-width:320px) and (max-width:374px) {
+    
+    .navbar{
+        width: 100%
+    }
+    .padre-check{
+        display: flex;
+        justify-content: center;
+    }
     .logo {
         margin-left: 0rem;
     }
@@ -937,23 +587,17 @@ label{
     .main {
         flex-direction: column;
     }
-    .card {
-        margin-left: 1rem;
-        margin-top: 3rem;
-    }
-    footer {
-        margin-top: 5rem;
-        height: 8rem;
-    }
     .logo-footer {
         margin: 2px;
     }
-    .petcare {
-        margin-left: 8rem;
-    }
-    .carta-flex {
+    .carta{
         flex-direction: column;
+        margin-left: 5%;
     }
+    .card5{
+        margin-top: 4rem;
+    }
+    
     a {
         margin-top: 0.7rem;
         width: 4rem;
@@ -961,33 +605,11 @@ label{
     .nav-item {
         padding-left: 0rem !important;
     }
-    .wrapper {
-        margin-top:1.5rem;
-    }
     .carrosel{
         display: none;
     }
     .todo{
         flex-direction: column;
-    }
-    .input-group{
-        width: 16rem !important;
-        margin-left: 2%;
-        margin-bottom: 2rem !important;
-    }
-    .card-2 {
-        width: 18.9rem;
-        margin-top: 2rem;
-        margin-left: -.5rem;
-       }
-       .hola{
-        width: 90% ;
-        margin-left: 1rem;
-        margin-top: 5rem;
-    }  
-    .fancy::before {
-
-     width: 0rem;
     }
     .fancy .text {
         margin-left:-2.2em;
