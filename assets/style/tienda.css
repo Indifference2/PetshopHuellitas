@@ -1,0 +1,250 @@
+.group {
+    line-height: 28px;
+    width: 50%;
+}
+
+.input {
+    width: 98%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(198, 152, 73, 0.19);
+}
+.navbar {
+    position: sticky !important;
+    top: 0;
+   
+}
+.fancy {
+
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    outline: none;
+    overflow: visible;
+    padding: .85em 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+
+
+.fancy .text {
+    font-size: .825em;
+    line-height: 1.33333em;
+    padding-left: 1em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: .5625rem;
+    top: -2px;
+    left: 0.625rem;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 1px;
+    width: .5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 1px;
+    width: 0.125rem;
+    right: 0.125rem;
+    bottom: -2px;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: rgb(253, 0, 0);
+}
+
+.fancy:hover::before {
+    width: 0.4375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: .2em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+
+/* targetas---------------------------------- */
+
+.card-2 {
+    width: 17rem;
+    margin-top: 2rem;
+    min-height: 32rem;
+    padding: .8em;
+    background: #f5f5f5;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+   }
+   
+   .card-img2 {
+    background-color: rgb(231, 157, 45);
+    height: 15rem;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+   }
+   
+   .card-info2 {
+    padding-top: 5%;
+    min-height: 8rem;
+    text-align: center;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .card-footer2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+   }
+   
+   /*Text*/
+  
+   .text-title1{
+    font-weight: 900;
+   margin-top: 4rem;
+   margin-right: 1rem;
+   }
+   
+   .text-body2 {
+    font-size: .9em;
+    padding-bottom: 10px;
+   }
+   
+   /*Button*/
+   .card-button2 {
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    
+   }
+   .carrito{
+    color: white !important;
+   }
+
+.carritoImagen{
+    width: 3rem;
+}
+
+   svg{
+    width: 3rem;
+    height: 2rem;
+   }
+
+   .cantidad-carrito{
+    width: 15px;
+    height: 20px;
+   }
+
+   .tamaño-boton{
+    width: 25px;
+    height: 25px;
+   }
+   /* MODAL*/
+
+   .modal-dialog{
+    max-width: 50rem!important;
+   }
+   
+   /*Hover*/
+   .card-2:hover {
+    box-shadow: rgba(21, 21, 21, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+   .card-button2:hover {
+    border: 1px solid rgb(231, 157, 45);
+    background-color: rgb(231, 157, 45);
+   }
+
+   .mas-info{
+    text-decoration: none;
+    color: rgb(231, 157, 45) !important;
+   }
+
+   .masinformacion  {
+    color: rgb(231, 157, 45);
+    padding-top: 1rem;
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-weight: 600;
+  }
+  
+  
+  
+ .masinformacion::after, .masinformacion::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(251, 150, 0);
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .masinformacion:hover::after, .masinformacion:hover::before {
+    width: 100%;
+  }
