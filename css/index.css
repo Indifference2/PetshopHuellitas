@@ -108,6 +108,10 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+.hola2 img{
+	object-fit: cover;
+}
 .group {
 	line-height: 28px;
 	width: 50%;
