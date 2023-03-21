@@ -7,7 +7,6 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
-
 .logoimg {
 	width: 8em;
 	object-fit: contain;
@@ -93,7 +92,6 @@ h1 {
 }
 .perrosygatos {
 	overflow: hidden;
-	cursor: pointer;
 }
 .perro {
 	background-image: url(../img/perrosolo.jpg);
@@ -102,6 +100,10 @@ h1 {
 	height: 50em;
 	width: 50%;
 	transition: 0.4s;
+}
+.perro a {
+	text-decoration: none;
+	color: white;
 }
 .perro:hover {
 	transform: scale(1.1);
@@ -113,6 +115,10 @@ h1 {
 	height: 50em;
 	width: 50%;
 	transition: 0.4s;
+}
+.gato a {
+	text-decoration: none;
+	color: white;
 }
 .gato:hover {
 	transform: scale(1.1);
@@ -340,6 +346,11 @@ span {
 .wrapper .Whatsapp:hover .tooltip::before {
 	background: #40e48d;
 	color: #fff;
+}
+@media (min-width: 991px) and (max-width: 1440px) {
+	.textCard {
+		font-size: 3em;
+	}
 }
 
 @media (min-width: 320px) and (max-width: 991px) {
