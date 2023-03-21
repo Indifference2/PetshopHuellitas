@@ -7,11 +7,10 @@ const app= createApp({
 
         return{
             datos :[],
-            categorias:[],
-            checkValue:[],
+            farmacia : [],
             resultado:[undefined],
-            filtrotexto:"",
-            disponible : []
+            filtrotexto:""
+           
 
         }
     },
@@ -20,19 +19,18 @@ const app= createApp({
             .then(response => response.json())
             .then((data) =>{
                 this.datos = data
-                this.categorias = [...new Set(this.datos.map(key => key.categoria))]
-                this.disponible = this.datos.filter(key => key.disponibles < 5)
-                console.log(this.datos)
-                this.resultado = data
+                this.farmacia = this.datos.filter(key => key.categoria== "jugueteria")
+                console.log(this.farmacia)
+                this.resultado =this.farmacia
                 
             })
     },
     methods:{
         
         filtrobusqueda(){
-            this.resultado = this.datos.filter(key => {
+            this.resultado = this.farmacia.filter(key => {
                 return key.producto.toLowerCase().includes(this.filtrotexto.toLowerCase())
-                && (this.checkValue.includes(key.categoria) || this.checkValue.length == 0)
+             
             })
         }
     }
