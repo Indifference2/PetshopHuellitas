@@ -9,8 +9,8 @@ const app= createApp({
             datos :[],
             farmacia : [],
             resultado:[undefined],
-            filtrotexto:""
-           
+            filtrotexto:"",
+            carrito : [],
 
         }
     },
@@ -30,7 +30,6 @@ const app= createApp({
         filtrobusqueda(){
             this.resultado = this.farmacia.filter(key => {
                 return key.producto.toLowerCase().includes(this.filtrotexto.toLowerCase())
-             
             })
         },
         agregarAlCarrito(item){
