@@ -32,7 +32,8 @@ const app= createApp({
                 return key.producto.toLowerCase().includes(this.filtrotexto.toLowerCase())
              
             })
-        }agregarAlCarrito(item){
+        },
+        agregarAlCarrito(item){
             if(!this.productoEstaRepetidoPorId(item._id)){
                 this.carrito.push({
                     nombre : item.producto,
