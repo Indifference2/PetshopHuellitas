@@ -38,7 +38,14 @@ const app= createApp({
         agregarAlCarrito(producto){
             this.carrito.push(producto)
             console.log(this.carrito)
-        }
+        },
+        eliminarDelCarrito(producto){
+            
+        },
+        productoEstaEnElCarrito(producto){
+            return this.carrito.includes(producto)
+        },
+
     },
 })
 app.mount("#andres")

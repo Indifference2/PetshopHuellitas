@@ -185,6 +185,11 @@ input:hover {
    .carrito{
     color: white !important;
    }
+
+   svg{
+    width: 3rem;
+    height: 2rem;
+   }
    
    /*Hover*/
    .card-2:hover {
