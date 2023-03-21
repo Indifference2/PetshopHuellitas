@@ -24,6 +24,7 @@ const app= createApp({
                 this.disponible = this.datos.filter(key => key.disponibles < 5)
                 console.log(this.datos)
                 this.resultado = data
+                this.carrito=JSON.parse(localStorage.getItem("carrito")) || []
                 
             })
     },
@@ -67,6 +68,12 @@ const app= createApp({
             }
         },
     },
+    computed:{
+        handleCarrito(){
+            localStorage.setItem("carrito", JSON.stringify(this.carrito))
+    }
+}
+
 })
 app.mount("#andres")
 
