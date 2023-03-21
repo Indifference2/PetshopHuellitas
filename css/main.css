@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.logoimg {
+	width: 8em;
+	object-fit: contain;
+}
+.nav-link {
+	margin-left: 50px;
+}
+header {
+	background-image: url(../img/perroygato.jpg);
+	background-position: end;
+}
+.navbar-toggler {
+	border: none;
+}
+
+nav {
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
+	min-height: 15vh;
+	background-color: white;
+	border-radius: 0px 0px 50px 50px;
+}
+.active {
+	padding: 10px;
+	background-color: #ca8e66;
+	color: white !important;
+	border-radius: 10px;
+}
+.material-symbols-outlined {
+	font-size: 40px;
+	color: #ca8e66;
+}
+.slogan {
+	background-image: url(../img/perroygato.jpg);
+	height: 60vh;
+	background-position: center;
+	background-attachment: scroll;
+}
+#topBtn {
+	display: none;
+	position: fixed;
+	bottom: 150px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #e1a37aea;
+	color: white;
+	box-shadow: 1px 1px 5px 1px black;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 50%;
+	height: 3em;
+	width: 3em;
+	font-size: 20px;
+}
+h1 {
+	font-weight: 700;
+	font-size: 3em;
+	letter-spacing: 5px;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.texto-dos {
+	width: 40rem;
+	font-size: 20px;
+	font-weight: 600;
+}
+.imgmain {
+	border-radius: 20px;
+	width: 100%;
+}
+.divcontenedor {
+	background-image: url(../img/fondoabout.jpg);
+	background-size: cover;
+	background-position: 100% 20%;
+}
+.h2index {
+	background-color: rgba(202, 142, 102, 0.737);
+	font-weight: 700;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.perrosygatos {
+	overflow: hidden;
+}
+.perro {
+	background-image: url(../img/perrosolo.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 50em;
+	width: 50%;
+	transition: 0.4s;
+}
+.perro a {
+	text-decoration: none;
+	color: white;
+}
+.perro:hover {
+	transform: scale(1.1);
+}
+.gato {
+	background-image: url(../img/gatosolo.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 50em;
+	width: 50%;
+	transition: 0.4s;
+}
+.gato a {
+	text-decoration: none;
+	color: white;
+}
+.gato:hover {
+	transform: scale(1.1);
+}
+.textCard {
+	font-weight: 600;
+	font-size: 8em;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.footerIndex {
+	width: 100%;
+	min-height: 8vh;
+	background-color: rgba(202, 142, 102, 0.737);
+}
+.ubicacion svg {
+	height: 4em;
+	width: 2em;
+	color: rgba(255, 0, 0, 0.373);
+}
+/*-----------------------------COMIENZA CONTACTO-------------------------------*/
+.modal-header {
+	border: none !important;
+}
+.modal-footer {
+	border: none !important;
+}
+.modal-dialog {
+	height: 100vh;
+}
+.contacto {
+	background-image: url(../img/perrodurmiendo.jpg);
+	background-position: center;
+	min-height: 60vh;
+}
+.contacto h1 {
+	font-size: 7em !important;
+}
+.textcontacto {
+	background-color: rgba(202, 142, 102, 0.737);
+	font-weight: 700;
+	text-shadow: -2px 4px 2px rgba(202, 142, 102, 0.88);
+}
+.formulario {
+	min-height: 40vh;
+	background-image: url(../img/gatolengua.jpg);
+	background-position: 50% 10%;
+	padding-left: 100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+form {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	padding: 50px 100px;
+	border-radius: 20px;
+}
+label {
+	text-align: center;
+}
+input {
+	color: #0d0d0d;
+	padding: 20px 15px 20px 60px;
+	width: 100%;
+	border-radius: 25px;
+	border: 0;
+	box-shadow: 0 0 10px rgba(202, 142, 102, 0.88);
+	outline: none;
+}
+input::placeholder {
+	font-size: 16px;
+	color: rgba(128, 128, 128, 0.607);
+}
+.mascotas {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+select {
+	color: #0d0d0d;
+	padding: 5px;
+	border-radius: 25px;
+	border: 0;
+	box-shadow: 0 0 10px rgba(202, 142, 102, 0.88);
+	outline: none;
+	text-align: center;
+	display: flex !important;
+	margin: auto;
+}
+.dudas {
+	font-size: 30px;
+}
+textarea {
+	width: 100%;
+	height: 7em !important;
+}
+.divForm {
+	position: relative;
+	color: #5e5e5e;
+	margin-bottom: 35px;
+}
+.imgform {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-55%);
+}
+.btn {
+	width: 100%;
+	color: white;
+	padding: 20px;
+	background: linear-gradient(90deg, rgba(202, 142, 102, 0.88), rgba(197, 171, 154, 0.88));
+}
+.btn:hover {
+	color: white !important;
+}
+
+/*----------------------------ENCUENTRANOS---------------------------*/
+.encuentranos {
+	background-image: url(../img/fondoubicacion.jpg);
+	background-position: center;
+	min-height: 60vh;
+}
+.encuentranos h1 {
+	font-size: 7em !important;
+}
+.divEncuentranos {
+	background-image: url(../img/fondoE.jpg);
+	background-size: cover;
+}
+iframe {
+	border-radius: 50px 0 50px 0px;
+	width: 500px !important;
+	height: 500px !important;
+}
+.textoU {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: 700;
+}
+span {
+	font-family: 'PT Sans Narrow', sans-serif;
+	color: rgb(202, 142, 102);
+}
+.wrapper {
+	display: inline-flex;
+	list-style: none;
+	height: 3rem;
+	margin-bottom: 1.3rem;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	justify-content: center;
+}
+.wrapper .icon {
+	position: relative;
+	background: #fff;
+	border-radius: 50%;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip {
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	background: #fff;
+	color: #fff;
+	padding: 5px 8px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+	position: absolute;
+	content: '';
+	height: 8px;
+	width: 8px;
+	background: #fff;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%) rotate(45deg);
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+	top: -45px;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+	background: #1877f2;
+	color: #fff;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+	background: #2cbfd5;
+	color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+	background: #e4405f;
+	color: #fff;
+}
+.wrapper .Whatsapp:hover,
+.wrapper .Whatsapp:hover .tooltip,
+.wrapper .Whatsapp:hover .tooltip::before {
+	background: #40e48d;
+	color: #fff;
+}
+@media (min-width: 991px) and (max-width: 1440px) {
+	.textCard {
+		font-size: 3em;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+	li {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 15px;
+	}
+	a {
+		margin: 0 !important;
+	}
+	.tienda {
+		margin: 0 !important;
+	}
+	.texto-dos {
+		padding: 15px;
+		text-align: center !important;
+	}
+	.material-symbols-outlined {
+		font-size: 40px;
+		justify-content: center;
+		margin: auto !important;
+	}
+	.divcontenedor {
+		flex-direction: column !important;
+	}
+	.perrosygatos {
+		flex-direction: column;
+	}
+	.perro {
+		width: 100%;
+		background-size: cover;
+		background-position-x: 65%;
+	}
+	.gato {
+		width: 100%;
+		background-position-x: 30%;
+	}
+	.textCard {
+		font-size: 3em;
+	}
+	.footerIndex {
+		flex-direction: column;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+	.redes {
+		margin: 0 !important;
+	}
+	.ubicacion {
+		margin: 0 !important;
+	}
+	/*--------------contacto--------------------*/
+	.contacto h1 {
+		font-size: 2.3em !important;
+	}
+	.formulario {
+		padding: 0;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+	form {
+		padding: 0;
+		padding-top: 15px;
+		box-shadow: none;
+	}
+	label {
+		color: white;
+	}
+	.mascotas {
+		display: flex !important;
+		justify-content: center;
+	}
+	.btn {
+		margin-bottom: 15px !important;
+	}
+	/*-----------------encuentranos-------------------*/
+	.encuentranos h1 {
+		font-size: 2.3em !important;
+	}
+	.contenedorTexto {
+		margin-top: 50px;
+	}
+	iframe {
+		width: 100% !important;
+	}
+	.icon {
+		padding-bottom: 0px !important;
+	}
+	.wrapper {
+		padding: 0;
+	}
+}
