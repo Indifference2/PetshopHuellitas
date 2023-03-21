@@ -109,7 +109,12 @@
                                 </button>
                             </div>
                         </div>
-                        
+                    </template>
+                        <template v-else>
+                            <div class="text-error">
+                                <h2>no results found</h2>
+                            </div>
+                        </template>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -164,8 +169,7 @@
                                             </tr>
                                         </tfoot>
                                     </table>
-                                    </template>
-                            </div>
+                                </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     <button type="button" class="btn btn-primary">Checkout</button>
@@ -173,12 +177,8 @@
                                 </div>
                             </div>
                         </div>
-                    </template>
-                    <template v-else>
-                        <div class="text-error">
-                            <h2>no results found</h2>
-                        </div>
-                    </template>
+                    
+                    
                 </div>
             </div>
         </div>

@@ -60,12 +60,13 @@ const app= createApp({
             }
         },
         eliminarDelCarrito(producto){
-            if(producto.contadorBoton > 1){
+            if(producto.contadorBoton > 1 ){
                 producto.contadorBoton -= 1
             }else{
-                this.carrito.filter(item => (!item.id.includes(producto.id)))
+                this.carrito =  this.carrito.filter(item => !(item.id === producto.id))
             }
         },
     },
 })
 app.mount("#andres")
+
