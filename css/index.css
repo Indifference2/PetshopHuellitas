@@ -466,6 +466,10 @@ svg {
 	color: white !important;
 }
 
+.carritoImagen{
+    width: 3rem;
+}
+
 /*Hover*/
 .card-2:hover {
 	box-shadow: rgba(21, 21, 21, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;

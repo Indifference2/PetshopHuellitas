@@ -8,10 +8,9 @@ const app= createApp({
         return{
             datos :[],
             farmacia : [],
-            resultado:[undefined],
-            filtrotexto:""
-           
-
+            resultado:[{}],
+            filtrotexto:"",
+            carrito : [],
         }
     },
     created(){
@@ -20,7 +19,7 @@ const app= createApp({
             .then((data) =>{
                 this.datos = data
                 this.farmacia = this.datos.filter(key => key.categoria== "farmacia")
-                this.resultado =this.farmacia
+                this.resultado = this.farmacia
             })
             this.carrito=JSON.parse(localStorage.getItem("carrito")) || []
     },
