@@ -478,7 +478,8 @@ input:hover {
   .material-symbols-outlined {
     color: rgb(147, 100, 31);
     font-size: 2rem !important;
-    margin-left: 5rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
 }
 
 
@@ -503,7 +504,7 @@ input:hover {
     
     .material-symbols-outlined {
         padding-top: 0.5rem;
-        margin-left: 0 !important;
+        margin-left: 2rem !important;
     }
     .nav-item {
         padding-left: 0rem !important;
@@ -559,7 +560,7 @@ input:hover {
    
     .material-symbols-outlined {
         padding-top: 0.5rem;
-        margin-left: 0 !important;
+        margin-left: 2rem !important;
     }
     
     .carrosel{
@@ -609,7 +610,7 @@ input:hover {
     }
     .material-symbols-outlined {
         padding-top: 0.5rem;
-        margin-left: 0 !important;
+        margin-left: 2rem !important;
     }
     .carrosel{
         display: none;
@@ -660,7 +661,7 @@ input:hover {
     }
     .material-symbols-outlined {
         padding-top: 0.5rem;
-        margin-left: 0 !important;
+        margin-left: 2rem !important;
     }
     .carrosel{
         display: none;
