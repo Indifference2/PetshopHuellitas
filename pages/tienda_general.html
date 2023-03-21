@@ -94,14 +94,6 @@
                                 </div>
                                 <div class="card-footer2">
                                     <span class="text-title2">$ {{dato.precio}}</span>
-                                    <button  @click="" class="btn">
-                                        <div class="card-button2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-dash" viewBox="0 0 16 16">
-                                                <path d="M6.5 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
-                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                            </svg>
-                                        </div>
-                                    </button>
                                     <button  @click="agregarAlCarrito(dato)" class="btn">
                                         <div class="card-button2">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
@@ -117,16 +109,63 @@
                                 </button>
                             </div>
                         </div>
+                        
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Productos añadidos</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    {{carrito}}
-                                </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="col-4">Producto</th>
+                                                <th class="col-3">Cantidad</th>
+                                                <th class="col-3">Precio por unidad</th>
+                                                <th class="col-2">Precio por cantidad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <template v-for="item of carrito">
+                                                <tr>
+                                                    <td>
+                                                        <img class="carritoImagen" :src="item.imagen" alt="item.nombre">
+                                                        <p class="m-0">{{item.nombre}}</p>
+                                                    </td>
+                                                    <td class="d-flex gap-4">
+                                                        <button @click="eliminarDelCarrito(item)" class="btn btn-danger p-0 tamaño-boton" type="button">
+                                                            <svg class="cantidad-carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                                                            </svg>
+                                                        </button>
+                                                        <h6 class="mt-1 text-center">
+                                                        {{item.contadorBoton}} / {{item.cantidadDisponible}}
+                                                        </h6>
+                                                        <button @click="agregarCantidadProducto(item)" class="btn btn-success p-0 tamaño-boton " type="button">
+                                                            <svg class="cantidad-carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                                            </svg>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        ${{item.precio}}
+                                                    </td>
+                                                    <td>
+                                                        ${{item.contadorBoton * item.precio}} 
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total:</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    </template>
+                            </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     <button type="button" class="btn btn-primary">Checkout</button>

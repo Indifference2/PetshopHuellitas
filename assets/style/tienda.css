@@ -186,9 +186,28 @@ input:hover {
     color: white !important;
    }
 
+.carritoImagen{
+    width: 3rem;
+}
+
    svg{
     width: 3rem;
     height: 2rem;
+   }
+
+   .cantidad-carrito{
+    width: 15px;
+    height: 20px;
+   }
+
+   .tamaño-boton{
+    width: 25px;
+    height: 25px;
+   }
+   /* MODAL*/
+
+   .modal-dialog{
+    max-width: 50rem!important;
    }
    
    /*Hover*/

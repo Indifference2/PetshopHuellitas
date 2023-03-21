@@ -35,17 +35,37 @@ const app= createApp({
                 && (this.checkValue.includes(key.categoria) || this.checkValue.length == 0)
             })
         },
-        agregarAlCarrito(producto){
-            this.carrito.push(producto)
+        agregarAlCarrito(item){
+            if(!this.productoEstaRepetidoPorId(item._id)){
+                this.carrito.push({
+                    nombre : item.producto,
+                    cantidadDisponible : item.disponibles,
+                    contadorBoton : 1,
+                    id : item._id,
+                    imagen : item.imagen,
+                    precio : item.precio,
+                })
+            }else{
+                item.contadorBoton + 1
+            }
             console.log(this.carrito)
         },
-        eliminarDelCarrito(producto){
-            
-        },
-        productoEstaEnElCarrito(producto){
-            return this.carrito.includes(producto)
+        productoEstaRepetidoPorId(productoId){
+            return this.carrito.some(item => item.id === productoId)
         },
 
+        agregarCantidadProducto(producto){
+            if(producto.cantidadDisponible > producto.contadorBoton){
+                producto.contadorBoton += 1
+            }
+        },
+        eliminarDelCarrito(producto){
+            if(producto.contadorBoton > 1){
+                producto.contadorBoton -= 1
+            }else{
+                this.carrito.filter(item => (!item.id.includes(producto.id)))
+            }
+        },
     },
 })
 app.mount("#andres")
