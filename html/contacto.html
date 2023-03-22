@@ -63,39 +63,44 @@
 				</div>
 			</nav>
 		</header>
-		<main>
+		<main id="app">
 			<div class="contacto text-light d-flex justify-content-center align-items-center">
 				<h1>Contactanos</h1>
 			</div>
 			<h2 class="text-center p-4 m-0 textcontacto text-light">DEJANOS TUS DATOS</h2>
 			<div class="formulario d-flex justify-content-center align-items-baseline flex-column">
-				<form action="" method="get">
+				<form>
 					<div class="divForm">
 						<img src="../img/person-fill.svg" alt="icono nombre" class="imgform" />
-						<input type="text" id="nombre" value="" placeholder="Ingrese sus nombres" required />
+						<input type="text"  name="nombre" v-model="nombre" placeholder="Ingrese su nombre" required />
 					</div>
 					<div class="divForm">
 						<img src="../img/person-fill.svg" alt="icono apellid" class="imgform" />
-						<input type="text" id="apellido" value="" placeholder="Ingrese sus apellido " required />
+						<input type="text"  name="apellido" v-model="apellido" placeholder="Ingrese su apellido" required />
 					</div>
 					<div class="divForm">
 						<img src="../img/telephone-fill.svg" alt="telefono" class="imgform" />
-						<input type="tel" id="celular" value="" placeholder="22548218" required />
+						<input type="tel"  name="telefono" v-model="telefono" placeholder="22548218" required />
 					</div>
 					<div>
 						<label for="mascotas" class="mascotas text-light fs-3">¿ Que mascota tenes ?</label>
-						<select name="" id="mascota" value="" class="mb-4" required>
-							<option value="">Mascotas</option>
-							<option value="">Perro</option>
-							<option value="">Gato</option>
-							<option value="">Ambas</option>
+						<select name="mascota" v-model="valorSelect" class="mb-4">
+							<option :value="null" disabled selected>Mascota</option>
+							<option value="perro">Perro</option>
+							<option value="gato">Gato</option>
+							<option value="ambas">Ambas</option>
 						</select>
 					</div>
 					<div>
 						<label for="dudas" class="dudas text-light">Cuentame tus dudas</label><br />
-						<textarea name="" id="dudas"></textarea>
+						<textarea name="texto_duda" v-model="mensaje" id="dudas"></textarea>
 					</div>
-					<button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>
+					<template v-if="!formularioEstaVacio()">
+						<button class="btn" disabled>Enviar</button>
+					</template>
+					<template v-else>
+						<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>
+					</template>
 					<div
 						class="modal fade"
 						id="staticBackdrop"
@@ -159,6 +164,8 @@
 			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script src="../js/main.js"></script>
+		<script src="../js/contact.js"></script>
 	</body>
 </html>
