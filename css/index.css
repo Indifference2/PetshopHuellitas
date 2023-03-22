@@ -342,7 +342,6 @@ input:hover {
 .fancy .text {
 	font-size: 0.825em;
 	line-height: 1.33333em;
-	padding-left: 1em;
 	display: block;
 	text-align: left;
 	transition: all 0.3s ease-in-out;
@@ -471,7 +470,11 @@ svg {
 }
 
 .carritoImagen{
-    width: 3rem;
+    width: 3rem!important;
+}
+
+.tamaño-boton{
+	width: 28px;
 }
 
 /*Hover*/

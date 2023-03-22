@@ -77,7 +77,6 @@
 			<img src="../img/img-3.jpg" class="img-carrosel" alt="imagen" />
 			<img src="../img/img-4.jpg" class="img-carrosel" alt="imagen" />
 		</div>
-
 		<div class="todo" id="andres">
 			{{handleCarrito}}
 			<div class="hola">
@@ -85,7 +84,6 @@
 					<input placeholder="Search" type="search" class="input" v-model="filtrotexto"
 						@keyup="filtrobusqueda" />
 				</div>
-
 				<div class="hola2 gap-4">
 					<template v-if="resultado.length > 0" v-for="dato of resultado">
 						<div>
@@ -93,13 +91,13 @@
 								<img class="card-img2" :src="dato.imagen" alt="imagen" />
 								<div class="card-info2">
 									<p class="text-title2">{{dato.producto}}</p>
-									<template v-if="dato.disponibles < 5">
-										<a class="fancy" href="#">
+									<template v-if="dato.disponibles > 0 && dato.disponibles <= 5">
+										<button class="fancy btnS">
 											<span class="top-key"></span>
 											<span class="text">Ultimas unidades</span>
 											<span class="bottom-key-1"></span>
 											<span class="bottom-key-2"></span>
-										</a>
+										</button>
 									</template>
 								</div>
 								<div class="card-footer2">
@@ -186,7 +184,7 @@
 										</tbody>
 										<tfoot>
 											<tr>
-												<th>Total: {{item}}</th>
+												<th>Total: ${{item}}</th>
 											</tr>
 										</tfoot>
 									</table>
