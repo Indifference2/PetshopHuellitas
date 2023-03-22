@@ -62,7 +62,7 @@
 							</button>
 						</li>
 					</ul>
-					
+
 				</div>
 			</div>
 		</nav>
@@ -157,48 +157,50 @@
 									<table>
 										<thead>
 											<tr>
-												<th class="col-4">Producto</th>
-												<th class="col-3">Cantidad</th>
-												<th class="col-3">Precio por unidad</th>
-												<th class="col-2">Precio por cantidad</th>
+												<th class="col-2 col-sm-3 text-center">Producto</th>
+												<th class="col-4 text-center">Cantidad</th>
+												<th class="col-3 text-center">Precio por unidad</th>
+												<th class="col-2 text-center">Precio por cantidad</th>
 											</tr>
 										</thead>
 										<tbody>
 											<template v-for="item of carrito">
 												<tr>
-													<td>
+													<td class="text-center">
 														<img class="carritoImagen" :src="item.imagen"
 															alt="item.nombre" />
 														<p class="m-0">{{item.nombre}}</p>
 													</td>
-													<td class="d-flex gap-4">
-														<button @click="eliminarDelCarrito(item)"
-															class="btn btn-danger p-0 tamaño-boton" type="button">
-															<svg class="cantidad-carrito"
-																xmlns="http://www.w3.org/2000/svg" width="16"
-																height="16" fill="currentColor" class="bi bi-dash-lg"
-																viewBox="0 0 16 16">
-																<path fill-rule="evenodd"
-																	d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
-															</svg>
-														</button>
-														<h6 class="mt-1 text-center">
-															{{item.contadorBoton}} /
-															{{item.cantidadDisponible}}
-														</h6>
-														<button @click="agregarCantidadProducto(item)"
-															class="btn btn-success p-0 tamaño-boton" type="button">
-															<svg class="cantidad-carrito"
-																xmlns="http://www.w3.org/2000/svg" width="16"
-																height="16" fill="currentColor" class="bi bi-plus-lg"
-																viewBox="0 0 16 16">
-																<path fill-rule="evenodd"
-																	d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-															</svg>
-														</button>
+													<td>
+														<div class="w-100 d-flex gap-2 justify-content-center align-items-center">
+															<button @click="eliminarDelCarrito(item)"
+																class="btn btn-danger p-0 tamaño-boton" type="button">
+																<svg class="cantidad-carrito"
+																	xmlns="http://www.w3.org/2000/svg" width="16"
+																	height="16" fill="currentColor"
+																	class="bi bi-dash-lg" viewBox="0 0 16 16">
+																	<path fill-rule="evenodd"
+																		d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
+																</svg>
+															</button>
+															<h6 class="mt-1">
+																{{item.contadorBoton}} /
+																{{item.cantidadDisponible}}
+															</h6>
+															<button @click="agregarCantidadProducto(item)"
+																class="btn btn-success p-0 tamaño-boton" type="button">
+																<svg class="cantidad-carrito"
+																	xmlns="http://www.w3.org/2000/svg" width="16"
+																	height="16" fill="currentColor"
+																	class="bi bi-plus-lg" viewBox="0 0 16 16">
+																	<path fill-rule="evenodd"
+																		d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+																</svg>
+															</button>
+														</div>
 													</td>
-													<td>${{item.precio}}</td>
-													<td>${{item.contadorBoton * item.precio}}</td>
+													<td class="text-center">${{item.precio}}</td>
+													<td class="text-center">${{item.contadorBoton * item.precio}}</td>
 												</tr>
 											</template>
 										</tbody>
