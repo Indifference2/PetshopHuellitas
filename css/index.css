@@ -22,6 +22,10 @@ nav a {
 	object-fit: contain;
 }
 
+#main-tienda{
+	min-height: 69.5vh;
+}
+
 nav {
 	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.99);
